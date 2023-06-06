@@ -1,3 +1,5 @@
+# Google Analytics Capstone Bike Trips Project
+
 library("tidyverse")
 library("dplyr")
 library("readr")
