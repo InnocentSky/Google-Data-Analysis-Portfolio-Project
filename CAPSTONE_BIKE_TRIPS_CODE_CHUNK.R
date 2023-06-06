@@ -109,9 +109,9 @@ all_trips$day_of_week <- format(as.Date(all_trips$date), "%A")
 
 all_trips$ride_length <- difftime(all_trips$ended_at,all_trips$started_at)
 
-all_trips$ride_length <- difftime(as.POSIXct(strptime(all_trips$ended_at, "%d/%m/%Y %H:%M"))
+all_trips$ride_length <- difftime(as.POSIXct(strptime(all_trips$ended_at, "%d/%m/%Y %H:%M")),
                                   
-                                  ,as.POSIXct(strptime(all_trips$started_at, "%d/%m/%Y %H:%M")), unit = "mins")
+                                  as.POSIXct(strptime(all_trips$started_at, "%d/%m/%Y %H:%M")), unit = "mins")
 
 str(all_trips)
 
